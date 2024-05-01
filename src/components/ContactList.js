@@ -50,7 +50,7 @@ const ContactList = ({
   const downloadSelectedContacts = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/contacts/download",
+        "https://contact-manager-backend2.onrender.com/api/contacts/download",
         { contactIds: selectedContacts },
         {
           responseType: "blob",

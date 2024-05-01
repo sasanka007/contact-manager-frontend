@@ -13,7 +13,7 @@ const CreateContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/createContact", {
+      await axios.post("https://contact-manager-backend2.onrender.com/api/createContact", {
         ...contactData,
         tags: contactData.tags.split(","),
       });

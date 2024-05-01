@@ -14,7 +14,7 @@ const ContactsPage = () => {
   const fetchContacts = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/contacts?page=${page}`
+        `https://contact-manager-backend2.onrender.com/api/contacts?page=${page}`
       );
       setContacts(response.data.contacts);
       setTotalPages(response.data.totalPages);
