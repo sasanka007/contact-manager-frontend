@@ -8,10 +8,10 @@ const ContactsPage = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [totalNoOfContacts, setTotalNoOfContacts] = useState(0);
   useEffect(() => {
-    fetchContacts();
-  });
+    fetchContacts(page);
+  },[page]);
 
-  const fetchContacts = async () => {
+  const fetchContacts = async (page) => {
     try {
       const response = await axios.get(
         `https://contact-manager-backend2.onrender.com/api/contacts?page=${page}`
