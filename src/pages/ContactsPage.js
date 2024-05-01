@@ -9,7 +9,7 @@ const ContactsPage = () => {
   const [totalNoOfContacts, setTotalNoOfContacts] = useState(0);
   useEffect(() => {
     fetchContacts();
-  }, [page]);
+  });
 
   const fetchContacts = async () => {
     try {
